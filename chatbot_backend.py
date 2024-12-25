@@ -3,15 +3,16 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
 from pydantic import BaseModel
-from chatbot.load_config import LoadProjectConfig
-from agent_graph.load_tools_config import LoadToolsConfig
-from agent_graph.build_full_graph import build_graph
-from utils.app_utils import create_directory
-from chatbot.memory import Memory
+from MyProject.src.chatbot.load_config import LoadProjectConfig
+from MyProject.src.agent_graph.load_tools_config import LoadToolsConfig
+from MyProject.src.agent_graph.build_full_graph import build_graph
+from MyProject.src.utils.app_utils import create_directory
+from MyProject.src.chatbot.memory import Memory
 import asyncio
 import uuid
 from openai import OpenAI
 import openai
+import os
 
 URL = "https://github.com/Farzad-R/LLM-Zero-to-Hundred/tree/master/RAG-GPT"
 hyperlink = f"[RAG-GPT user guideline]({URL})"
@@ -35,16 +36,24 @@ app.add_middleware(
     allow_headers=["Authorization", "Content-Type"],
 )
 
+os.environ['OPENAI_API_KEY'] = os.getenv("OPEN_AI_API_KEY")
+api_key = os.environ['OPENAI_API_KEY']  # Assign to a variable for reuse
+
+# Configure OpenAI with the API key
+openai.api_key = api_key
+
 async def generate_heading(human_messages: List[str], ai_responses: List[str]) -> str:
     if not human_messages and not ai_responses:
         return "New Conversation"
 
+    # Construct the conversation text
     conversation_text = "\n".join(
         f"User: {user}\nAI: {ai}" for user, ai in zip(human_messages, ai_responses)
     )
     prompt = f"{conversation_text}\n\nGenerate a very short concise and meaningful heading for this conversation. Note: Dont use commas and anytype of brackets please"
 
-    response = client.chat.completions.create(
+    # Use the OpenAI API to get a response
+    response = openai.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": "You are a helpful assistant."},
@@ -53,6 +62,7 @@ async def generate_heading(human_messages: List[str], ai_responses: List[str]) -
         temperature=0.7,
     )
 
+    # Return the generated heading
     return response.choices[0].message.content.strip()
 
 class ChatBot:

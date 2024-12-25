@@ -10,7 +10,7 @@ load_dotenv()
 class LoadToolsConfig:
 
     def __init__(self) -> None:
-        with open(here("configs/tools_config.yml")) as cfg:
+        with open(here("MyProject/configs/tools_config.yml")) as cfg:
             app_config = yaml.load(cfg, Loader=yaml.FullLoader)
 
         # Set environment variables

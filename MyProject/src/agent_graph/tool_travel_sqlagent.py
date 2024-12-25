@@ -7,7 +7,7 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 from operator import itemgetter
 from langchain_openai import ChatOpenAI
-from agent_graph.load_tools_config import LoadToolsConfig
+from .load_tools_config import LoadToolsConfig
 
 TOOLS_CFG = LoadToolsConfig()
 

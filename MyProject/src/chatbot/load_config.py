@@ -6,7 +6,7 @@ from pyprojroot import here
 
 load_dotenv()
 
-with open(here("configs/project_config.yml")) as cfg:
+with open(here("MyProject/configs/project_config.yml")) as cfg:
     app_config = yaml.load(cfg, Loader=yaml.FullLoader)
 
 
@@ -20,3 +20,5 @@ class LoadProjectConfig:
 
         # Load memory config
         self.memory_dir = here(app_config["memory"]["directory"])
+
+

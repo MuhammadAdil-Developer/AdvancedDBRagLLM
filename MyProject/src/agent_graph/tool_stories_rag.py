@@ -1,7 +1,7 @@
 from langchain_chroma import Chroma
 from langchain_openai import OpenAIEmbeddings
 from langchain_core.tools import tool
-from agent_graph.load_tools_config import LoadToolsConfig
+from .load_tools_config import LoadToolsConfig
 
 TOOLS_CFG = LoadToolsConfig()
 

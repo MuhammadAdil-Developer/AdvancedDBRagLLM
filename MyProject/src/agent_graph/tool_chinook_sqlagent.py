@@ -7,7 +7,7 @@ from langchain.chains import create_sql_query_chain
 from langchain_core.runnables import RunnablePassthrough
 from operator import itemgetter
 from langchain_core.tools import tool
-from agent_graph.load_tools_config import LoadToolsConfig
+from .load_tools_config import LoadToolsConfig
 
 TOOLS_CFG = LoadToolsConfig()
 
