@@ -1,0 +1,22 @@
+thread_id,timestamp,user_query,response
+1,00:19:32,hi,Hello! How can I assist you today?
+1,02:47:45,"Hello, how are you?","Hello! I'm just a program, so I don't have feelings, but I'm here and ready to help you. How can I assist you today?"
+1,03:00:37,Hello,Hello! How can I assist you today?
+1,03:01:30,can you tell me how many employess are there?,"It seems that I'm unable to retrieve the number of employees due to issues with accessing the relevant tables in the database. If you have any specific information or context about the organization or if there's something else you'd like to know, please let me know!"
+1,03:04:10,ok ok,"If you have any other questions or need assistance with something else, feel free to ask!"
+1,03:05:57,ok ok,Hello! How can I assist you today?
+1,03:07:08,ok ok,Hello! How can I assist you today?
+1,22:15:40,ok ok,Hello! How can I assist you today?
+1,22:16:00,how are you?,"I'm just a program, so I don't have feelings, but I'm here and ready to help you! How can I assist you today?"
+1,22:57:49,hi,Hello! How can I assist you today?
+1,22:58:22,hey can you really help me ??,Absolutely! What do you need help with?
+1,23:10:57,hi,Hi again! How can I assist you today?
+1,23:13:09,hi,Hello! It seems like you're saying hi. How can I help you today?
+1,23:23:21,hey there,Hey! How's it going? What can I do for you today?
+1,23:29:25,hi,Hi! How can I assist you today?
+1,23:33:27,hey are you with,"Yes, I'm here! How can I help you?"
+1,23:35:42,hi,Hello! How can I assist you today?
+1,23:37:37,hey there,Hey! What’s on your mind? How can I help you today?
+1,23:40:20,kaise hu ap yar,"Main theek hoon, shukriya! Aap kaise hain? Kya main aapki kisi tarah se madad kar sakta hoon?"
+1,23:43:57,ok bhai,"Theek hai! Agar aapko kisi cheez ki zaroorat ho ya koi sawaal ho, toh bataiye. Main madad karne ke liye yahan hoon!"
+1,23:44:28,ha ha bikul mujhe pata hy apka ap har kisi ki bhut achi madad aur life banatede hy,"Shukriya! Aapke is pyare shabd ke liye. Main yahan aapki madad karne ke liye hoon. Agar aapko kisi bhi cheez ki zaroorat ho, toh bejhijhak poochiye!"

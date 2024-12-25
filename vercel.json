@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "AgentGraph-Intelligent-Q&A-and-RAG-System/src/chatbot/chatbot_backend.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "AgentGraph-Intelligent-Q&A-and-RAG-System/src/chatbot/chatbot_backend.py"
+      }
+    ]
+  }
+  
